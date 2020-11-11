@@ -174,7 +174,7 @@ header * {
 }
 
 .active::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 4px;
@@ -256,19 +256,19 @@ header * {
 }
 
 .adv-detail::before {
-  background-image: url(../images/hero/icons/Vector.svg);
+  background-image: url(../images/hero/icons/antenna.svg);
 }
 
 .adv-punctual::before {
-  background-image: url(../images/hero/icons/Vector-1.svg);
+  background-image: url(../images/hero/icons/clock1.svg);
 }
 
 .adv-planing::before {
-  background-image: url(../images/hero/icons/Vector-2.svg);
+  background-image: url(../images/hero/icons/diagram1.svg);
 }
 
 .adv-tech::before {
-  background-image: url(../images/hero/icons/Vector-3.svg);
+  background-image: url(../images/hero/icons/astronaut1.svg);
 }
 
 .adv-item {
@@ -520,7 +520,7 @@ footer .logo {
   height: 50px;
   font-weight: 700;
   font-size: 16px;
-  padding: 10px 13px 13px 29px;
+  padding: 10px 13px 10px 29px;
   border: 0px;
   line-height: 1.875;
   border-radius: 4px;
@@ -529,10 +529,8 @@ footer .logo {
 .mailing-icon {
   width: 24px;
   height: 24px;
-  background-repeat: no-repeat;
-  background-size: contain;
+  fill: var(--background-color);
   margin-left: 10px;
-  background-image: url(../images/forms/SVG/icon-send.svg);
 }
 
 .mailing-input {
@@ -712,14 +710,23 @@ textarea::placeholder {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+.close-logo {
+  width: 11px;
+  height: 11px;
+}
+
 .modal-button {
   position: absolute;
-  padding: 0px;
+  padding: 10px;
   top: 4px;
   right: 4px;
   border: none;
   border-radius: 50%;
   background-color: var(--background-color);
+}
+
+.modal-button:hover .close-logo {
+  fill: var(--focus-color);
 }
 
 /* portfolio styles */
@@ -793,6 +800,8 @@ font-weight: normal; */
   color: var(--background-color);
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
@@ -800,10 +809,13 @@ font-weight: normal; */
   pointer-events: none;
 }
 
-.portfolio-item:hover .text-image {
+.portfolio-card:hover .text-image {
   transform: translateY(0%);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card {
+  text-decoration: none;
+  color: var(--main-text-color);
 }
 
 .portfolio-title {
